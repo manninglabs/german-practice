@@ -6,6 +6,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+Vue.component('main-banner', require('./components/MainBanner.vue'))
+Vue.component('list-exersices', require('./components/ListExersices.vue'))
+Vue.component('site-footer', require('./components/Footer.vue'))
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
