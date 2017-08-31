@@ -1,0 +1,10 @@
+{
+  "name": "german-practice",
+  "version": "0.1.0",
+  "description": "A Vue.js project",
+  "author": "Лаптев Артем <artemlaptev63@mail.ru>",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  }
+}
