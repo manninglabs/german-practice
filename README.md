@@ -1,7 +1,7 @@
 # german-practice
 
 ## First time Heroku setup
-
+heroku config:set NODE_ENV=production
 NODE_ENV=production yarn run build
 cp package.json.prod dist/package.json
 git subtree push --prefix dist heroku master
