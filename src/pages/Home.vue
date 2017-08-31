@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-banner />
-    <list-exersices />
+    <list-exercises />
     <site-footer />
   </div>
 </template>
