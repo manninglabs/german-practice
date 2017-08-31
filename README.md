@@ -1,7 +1,19 @@
 # german-practice
 
-## Heroku setup
-heroku config:set NODE_ENV=production
+## Deployment
+1. Build deployment dist dir.
+```
+NODE_ENV=production npm run build
+node server.js
+```
+2. Go to localhost:5000 and make sure site is working well.
+3. If site is working, stop server.
+4. Git add, commit and push your code to master
+5. Then to deploy, run `git push heroku master`
+6. To troubleshoot any issues or errors, run `heroku logs` to see server logs.
+
+## First Time Heroku setup
+`heroku config:set NODE_ENV=production`
 
 > A Vue.js project
 
