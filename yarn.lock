@@ -1756,13 +1756,9 @@ diff@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-1.4.0.tgz#7f28d2eb9ee7b15a97efd89ce63dcfdaa3ccbabf"
 
-diff@3.2.0:
+diff@3.2.0, diff@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.2.0.tgz#c9ce393a4b7cbd0b058a725c93df299027868ff9"
-
-diff@^3.1.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.3.0.tgz#056695150d7aa93237ca7e378ac3b1682b7963b9"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
@@ -2242,7 +2238,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.14.1, express@^4.15.2:
+express@^4.15.2, express@^4.15.4:
   version "4.15.4"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.4.tgz#032e2253489cf8fce02666beca3d11ed7a2daed1"
   dependencies:
