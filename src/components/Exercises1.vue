@@ -2,19 +2,23 @@
   <div id="exercise-1">
     <h2>Exercise 1</h2>
     <p class="exercise-description">For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.</p>
-    <div>
-      <p class="question">1&nbsp;&nbsp;Lorem Ipsum is simply dummy text.</p>
-      <p class="input-text"><input type="text" value=""></p>
-    </div>
-    <div>
-      <p class="question">2&nbsp;&nbsp;Lorem Ipsum has been the industry’s.</p>
-      <p class="input-text"><input type="text" value=""></p>
-    </div>
-    <div>
-      <p class="question">3&nbsp;&nbsp;It has survived not only five centuries.</p>
-      <p class="input-text"><input type="text" value=""></p>
-    </div>
-    <input type="submit" value="CHECK">
+    <form>
+      <div class="question">
+        <p class="question-text">1&nbsp;&nbsp;Question №31. What is 5 - 2?(text)</p>
+        <p class="input-text"><input data-correct-answer="three" type="text" value=""></p>
+      </div>
+      <div class="question">
+        <p class="question-text">2&nbsp;&nbsp;Question №2. What is 3 - 2?(text)</p>
+        <p class="input-text"><input data-correct-answer="one" type="text" value=""></p>
+      </div>
+      <div class="question">
+        <p class="question-text">3&nbsp;&nbsp;Question №3. What is 7 - 2?(text)</p>
+        <p class="input-text"><input data-correct-answer="five" type="text" value=""></p>
+      </div>
+      <input class="submit" type="submit" value="CHECK">
+      <input id="try-again" class="click-visible" type="button" value="TRY AGAIN">
+      <input id="show-answers" class="click-visible" type="button" value="SHOW ANSWERS">
+    </form>
     <hr />
   </div>
 </template>
@@ -24,8 +28,6 @@
     name: 'Exercises1'
   }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #exercise-1 {
     padding-left: 100px;
@@ -46,7 +48,7 @@
     letter-spacing: 1.2px;
     color: #151f40;
   }
-  #exercise-1 .question {
+  #exercise-1 .question-text {
     font-size: 16px;
     font-style: normal;
     letter-spacing: 1.2px;
@@ -65,7 +67,9 @@
     font-size: 15px;
     border: solid 0.5px #979797;
   }
-  input[type="submit"] {
+  input[type="submit"],
+  input#try-again,
+  input#show-answers {
     background-color: #4cb2d4;
     font-size: 15px;
     letter-spacing: 1.2px;
@@ -85,4 +89,38 @@
     height: 0.2px;
     background-color: #999999;
   }
+  input#try-again {
+    background-color: #a6aaab;
+  }
+  input#try-again,
+  input#show-answers {
+    display: none;
+  }
+  /* jquery classes */
+  .question input.correctAns {
+    color: #56b949 !important;
+    background-image: url('../../src/assets/check-circle.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 380px;
+  }
+  .question input.incorrectAns {
+    color: #f2341c !important;
+    background-image: url('../../src/assets/x-circle.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 380px;
+  }
+  .question input.emptyAns {
+    border: 3px solid #f2341c !important;
+    background-image: url('../../src/assets/x-circle.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 380px;
+  }
+/*  input#try-again.visible,
+  input#show-answers.visible {
+    display: inline-block;
+  }*/
+  /* end jquery classes */
 </style>

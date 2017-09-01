@@ -15,7 +15,6 @@ export default {
   name: 'Exercises'
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #exercises a {
