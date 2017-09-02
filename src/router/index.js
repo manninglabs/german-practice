@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
-import Exercises from '@/pages/Exercises'
+import ListExercises from '@/pages/exercises/List'
+import ShowExercise from '@/pages/exercises/Show'
 
 Vue.use(Router)
 
@@ -16,7 +17,13 @@ export default new Router({
     {
       path: '/exercises',
       name: 'exercises',
-      component: Exercises
+      component: ListExercises
+    },
+    {
+      path: '/exercise/:id',
+      name: 'exercise',
+      component: ShowExercise,
+      props: true
     }
   ]
 })

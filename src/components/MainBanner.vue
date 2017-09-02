@@ -4,7 +4,8 @@
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />
          master German grammar</p>
-      <a href="#list-exercises">Start Practicing</a>
+      <!-- <a href="#list-exercises">Start Practicing</a> -->
+      <router-link to="/exercises">Start Practicing</router-link>
     </div>
   </div>
 </template>

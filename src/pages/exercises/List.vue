@@ -1,18 +1,35 @@
 <template>
   <div id="exercises">
     <site-header />
-    <router-link to="/">&lt; List of German grammar topics</router-link>
-    <h1>Grammar Topic Number 1</h1>
-    <exercises-1 />
-    <exercises-2 />
-    <exercises-3 />
+    <h1>Exercises</h1>
+    <div v-for="e in exercises">
+      <router-link :to="{ name: 'exercise', params: { id: e.id, exercise: e }}">Exercise {{ e.id }}</router-link>
+    </div>
     <site-footer />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Exercises'
+  name: 'Exercises',
+  data () {
+    return {
+      exercises: [
+        {
+          id: 1,
+          name: 'exercise1'
+        },
+        {
+          id: 2,
+          name: 'exercise2'
+        },
+        {
+          id: 3,
+          name: 'exercise3'
+        }
+      ]
+    }
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
