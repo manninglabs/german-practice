@@ -9,16 +9,16 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
     <script>
-      $(function() {
+      $(document).ready(function() {
         console.log('jquery works!');
 
         // by default, a submit button will reload the page, but in this
         // case, prevent the default submit event and perform our own logic
         $('#exercise-1 form').submit(function(event) {
-          event.preventDefault();
+          event.preventDefault(); // на первом клике не срабатывает функция
           console.log('submitting');
-          showHideButtons();
           formCheck();
+          showHideButtons();
 
           $('#try-again').click(function() {
             startAgain();

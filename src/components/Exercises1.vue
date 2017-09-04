@@ -4,7 +4,7 @@
     <p class="exercise-description">For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.</p>
     <form>
       <div class="question">
-        <p class="question-text">1&nbsp;&nbsp;Question №31. What is 5 - 2?(text)</p>
+        <p class="question-text">1&nbsp;&nbsp;Question №1. What is 5 - 2?(text)</p>
         <p class="input-text"><input data-correct-answer="three" type="text" value=""></p>
       </div>
       <div class="question">
