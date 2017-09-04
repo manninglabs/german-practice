@@ -2,6 +2,7 @@
   <div>
     <site-header />
     <h1>{{ exercise.name }}</h1>
+    <!-- TODO add a loop here to show your list of questions -->
     <site-footer />
   </div>
 </template>

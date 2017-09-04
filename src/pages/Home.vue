@@ -17,7 +17,21 @@
         exercises: [
           {
             id: 1,
-            name: 'exercise1'
+            name: 'exercise1',
+            questions: [
+              {
+                text: "This is my question.",
+                answer: "abc"
+              },
+              {
+                text: "This is my question.",
+                answer: "abc"
+              },
+              {
+                text: "This is my question.",
+                answer: "abc"
+              }
+            ]
           },
           {
             id: 2,
