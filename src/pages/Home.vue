@@ -20,16 +20,16 @@
             name: 'exercise1',
             questions: [
               {
-                text: "This is my question.",
-                answer: "abc"
+                text: 'This is my question.',
+                answer: 'abc'
               },
               {
-                text: "This is my question.",
-                answer: "abc"
+                text: 'This is my question.',
+                answer: 'abc'
               },
               {
-                text: "This is my question.",
-                answer: "abc"
+                text: 'This is my question.',
+                answer: 'abc'
               }
             ]
           },
