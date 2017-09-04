@@ -2,7 +2,7 @@
   <div>
     <site-header />
     <h1>{{ exercise.name }}</h1>
-    <!-- TODO add a loop here to show your list of questions -->
+    <p v-for="p in exercise.questions">{{ p.text }} {{ p.answer }}</p>
     <site-footer />
   </div>
 </template>

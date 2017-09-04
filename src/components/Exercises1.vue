@@ -118,9 +118,5 @@
     background-size: 20px;
     background-position: 380px;
   }
-/*  input#try-again.visible,
-  input#show-answers.visible {
-    display: inline-block;
-  }*/
   /* end jquery classes */
 </style>

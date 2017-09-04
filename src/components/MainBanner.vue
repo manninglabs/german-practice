@@ -4,7 +4,6 @@
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />
          master German grammar</p>
-      <!-- <a href="#list-exercises">Start Practicing</a> -->
       <router-link to="/exercises">Start Practicing</router-link>
     </div>
   </div>
@@ -33,6 +32,7 @@
     color: #4cb2d4;
     padding-top: 150px;
     margin-bottom: 20px;
+    padding-left: 0px;
   }
   #main-banner p {
     margin-bottom: 40px;
