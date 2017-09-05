@@ -5,13 +5,13 @@
     <div class="loading" v-if="loading">
       Loading...
     </div>
-    <div v-if="error" class="error">
+    <div class="error" v-if="error">
       {{ error }}
     </div>
     <div class="exercise-container" v-if="exercise">
       <h2>{{ exercise.name }}</h2>
       <p class="exercise-description">
-        <!-- TODO load this exercise description from our page object instead -->
+        <!-- ARTEM TODO load this exercise description from our page object instead -->
         For this exercise, you will be given a paragraph consisting of 10-20
         sentences with missing words. In order to complete the exercise, you must
         fill in each blank with the correct German adjective. All adjectives must
@@ -19,10 +19,13 @@
         sentence.</p>
       <div v-for="(q, index) in exercise.questions">
         <p>Question {{ index + 1 }}:</p>
+        <!-- TODO later, based on the type of question, show the correct component -->
         <fitb-question :question="q" ref="renderedQuestion" />
       </div>
       <button v-on:click="checkAnswers">Check</button>
-      <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">Try Again</button>
+      <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
+        Try Again
+      </button>
     </div>
   </div>
 </template>
