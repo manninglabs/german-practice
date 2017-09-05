@@ -10,13 +10,7 @@
     </div>
     <div class="exercise-container" v-if="exercise">
       <h2>{{ exercise.name }}</h2>
-      <p class="exercise-description">
-        <!-- ARTEM TODO load this exercise description from our page object instead -->
-        For this exercise, you will be given a paragraph consisting of 10-20
-        sentences with missing words. In order to complete the exercise, you must
-        fill in each blank with the correct German adjective. All adjectives must
-        have the correct endings to match the gender and case of the rest of the
-        sentence.</p>
+      <p class="exercise-description">{{ exercise.description }}</p>
       <div v-for="(q, index) in exercise.questions">
         <p>Question {{ index + 1 }}:</p>
         <!-- TODO later, based on the type of question, show the correct component -->
