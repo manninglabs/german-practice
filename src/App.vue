@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <site-footer />
   </div>
 </template>
 
@@ -22,5 +23,16 @@ export default {
     padding-left: 100px;
     margin-top: 40px;
     font-weight: 100;
+  }
+  h2 {
+    font-size: 17px;
+    color: #151f40;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+  hr {
+    height: 0.2px;
+    background-color: #999999;
   }
 </style>

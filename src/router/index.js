@@ -16,8 +16,7 @@ export default new Router({
     {
       path: '/exercise/:id',
       name: 'exercise',
-      component: ShowExercise,
-      props: true
+      component: ShowExercise
     }
   ]
 })

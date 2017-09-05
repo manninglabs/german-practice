@@ -6,9 +6,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.component('main-banner', require('./components/MainBanner.vue'))
-Vue.component('site-footer', require('./components/Footer.vue'))
 Vue.component('site-header', require('./components/Header.vue'))
+Vue.component('site-footer', require('./components/Footer.vue'))
+Vue.component('fitb-question', require('./components/questions/FITBQuestion.vue'))
 
 /* eslint-disable no-new */
 new Vue({

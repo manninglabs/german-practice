@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "The Laptev Family",
+    "questions": [
+      {
+        "text": "Artem's daughter is named _.",
+        "answers": ["Katja"]
+      },
+      {
+        "text": "Irina's favorite desert is _.",
+        "answers": ["ice cream|chocolate"]
+      },
+      {
+        "text": "Olya likes to travel to _ but her favorite country is still _.",
+        "answers": ["Turkey|Kazan|Sochi", "Russia"]
+      }
+    ]
+  }
+]
