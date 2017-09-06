@@ -89,6 +89,17 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  a {
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    color: #4cb2d4;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 100px;
+  }
+  a:hover {
+    color: #56b949;
+  }
   .exercise-container {
     padding-left: 100px;
     padding-right: 100px;

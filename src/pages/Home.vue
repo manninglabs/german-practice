@@ -64,14 +64,14 @@
     background-color: #56b949;
   }
   .exercise-list-item {
-    font-size: 17px;
+    font-size: 20px;
     letter-spacing: 1.2px;
     color: #4cb2d4;
     text-decoration: none;
     cursor: pointer;
     padding-left: 135px;
   }
-  .exercise-list-item a:hover {
+  .exercise-list-item:hover {
     color: #56b949;
   }
 

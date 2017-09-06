@@ -52,7 +52,7 @@
     font-weight: 100;
   }
   .input-text input {
-    margin-left: 22px;
+    margin-left: 0px;
     width: 400px;
     padding: 5px;
     text-align: left;
