@@ -80,9 +80,10 @@
         }
       },
       tryAgain () {
-        for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          this.$refs.renderedQuestion[i].clearField()
-        }
+        // clears all fields input
+        for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {//???
+          this.$refs.renderedQuestion[i].clearField()//???
+        }//???
         // reload data, thus triggering reset of page state
         this.fetchData()
       }
