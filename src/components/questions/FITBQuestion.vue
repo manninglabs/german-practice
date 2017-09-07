@@ -2,7 +2,7 @@
   <div class="question">
     <p>{{ question.text }}</p>
     <p v-if="exposeAnswer">Valid answers are {{ question.answers }}</p>
-    <p class="input-text"><input data-correct-answer="three" type="text" value=""></p>
+    <p class="input-text"><input type="text" value="" v-model="textValue"></p>
 
     <!-- <div class="question">
         <p class="question-text">2&nbsp;&nbsp;Question №2. What is 3 - 2?(text)</p>
@@ -24,12 +24,16 @@
     props: ['question'],
     data () {
       return {
-        exposeAnswer: false
+        exposeAnswer: false,
+        textValue: ''
       }
     },
     methods: {
       showAnswer () {
         this.exposeAnswer = false
+      },
+      clearField () {
+        this.textValue = ''
       }
     },
     computed: {
