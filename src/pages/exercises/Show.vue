@@ -73,7 +73,7 @@
       checkAnswers () {
         this.answersSubmitted = true
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          this.$refs.renderedQuestion[i].setShowAnswer(true)
+          // TODO update the questions's 'showAnswer' state
         }
       },
       tryAgain () {

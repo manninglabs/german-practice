@@ -19,23 +19,22 @@
     },
     computed: {
       answerClass () {
-        if (this.showAnswer === false) {
-          return ''
-        } else {
-          return (this.isCorrect() === true ? 'correct' : 'incorrect')
-        }
+        // TODO return the CSS class name to use, either '', 'correct', or 'incorrect'
+        // if we're not showing the answer, return ''
+        // else if are showing the answer, return 'correct' or 'incorrect' based on
+        // the result of this.isCorrect()
       }
     },
     methods: {
       isCorrect () {
-        return (this.question.answer === this.userAnswer.toLowerCase())
+        // TODO return true or false based on whether the questions's answer matches
+        // (case insenstitive) to the user's answer
       },
       setShowAnswer (show) {
         this.showAnswer = show
       },
       reset () {
-        this.showAnswer = false
-        this.userAnswer = ''
+        // TODO reset this form so showAnswer is false and user's text field is cleared
       }
     }
   }
