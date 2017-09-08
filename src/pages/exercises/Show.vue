@@ -76,14 +76,18 @@
         // trigger .showAnswer() for each rendered question component
         this.answersSubmitted = true
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          this.$refs.renderedQuestion[i].showAnswer()
+          if (this.$refs.renderedQuestion[i].isCorrect()) {
+            // TODO set state to correct
+          } else {
+            // TODO set state to incorrect
+          }
         }
       },
       tryAgain () {
         // clears all fields input
-        for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {//???
-          this.$refs.renderedQuestion[i].clearField()//???
-        }//???
+        for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
+          this.$refs.renderedQuestion[i].clearField()
+        }
         // reload data, thus triggering reset of page state
         this.fetchData()
       }
@@ -126,14 +130,10 @@
     outline: none;
     margin-top: 20px;
     margin-bottom: 25px;
-    margin-left: 22px;
     cursor: pointer;
     text-transform: uppercase;
   }
   .exercise-container button:active {
     background-color: #56b949;
-  }
-  .neutral-button {
-    background-color: #a6aaab;
   }
 </style>

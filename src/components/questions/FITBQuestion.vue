@@ -1,8 +1,8 @@
 <template>
   <div class="question">
     <p>{{ question.text }}</p>
-    <p v-if="exposeAnswer">Valid answers are {{ question.answers }}</p>
-    <p class="input-text"><input type="text" value="" v-model="textValue"></p>
+    <p v-if="exposeAnswer">Valid answers are {{ question.answer }}</p>
+    <p class="input-text"><input type="text" value="" v-model="userAnswer"></p>
 
     <!-- <div class="question">
         <p class="question-text">2&nbsp;&nbsp;Question №2. What is 3 - 2?(text)</p>
@@ -25,7 +25,7 @@
     data () {
       return {
         exposeAnswer: false,
-        textValue: ''
+        userAnswer: ''
       }
     },
     methods: {

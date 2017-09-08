@@ -6,15 +6,15 @@
     "questions": [
       {
         "text": "Artem's daughter is named _.",
-        "answers": ["Katja"]
+        "answer": "Katja"
       },
       {
         "text": "Irina's favorite desert is _.",
-        "answers": ["ice cream|chocolate"]
+        "answer": "Cake"
       },
       {
-        "text": "Olya likes to travel to _ but her favorite country is still _.",
-        "answers": ["Turkey|Kazan|Sochi", "Russia"]
+        "text": "Olya's favorite country is _.",
+        "answer": "Russia"
       }
     ]
   }
