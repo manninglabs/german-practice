@@ -12,8 +12,6 @@
       <h2>{{ exercise.name }}</h2>
       <p class="exercise-description">{{ exercise.description }}</p>
       <div v-for="(q, index) in exercise.questions">
-        <p>Question {{ index + 1 }}:</p>
-        <!-- TODO later, based on the type of question, show the correct component -->
         <fitb-question :question="q" ref="renderedQuestion" />
       </div>
       <button v-on:click="checkAnswers">Check</button>
@@ -73,20 +71,15 @@
         console.log('loaded exercise ' + this.exercise.id)
       },
       checkAnswers () {
-        // trigger .showAnswer() for each rendered question component
         this.answersSubmitted = true
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          if (this.$refs.renderedQuestion[i].isCorrect()) {
-            // TODO set state to correct
-          } else {
-            // TODO set state to incorrect
-          }
+          this.$refs.renderedQuestion[i].setShowAnswer(true)
         }
       },
       tryAgain () {
         // clears all fields input
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          this.$refs.renderedQuestion[i].clearField()
+          this.$refs.renderedQuestion[i].reset()
         }
         // reload data, thus triggering reset of page state
         this.fetchData()

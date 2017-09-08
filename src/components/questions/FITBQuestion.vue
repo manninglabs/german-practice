@@ -1,21 +1,10 @@
 <template>
   <div class="question">
     <p>{{ question.text }}</p>
-    <p v-if="exposeAnswer">Valid answers are {{ question.answer }}</p>
-    <p class="input-text"><input type="text" value="" v-model="userAnswer"></p>
-
-    <!-- <div class="question">
-        <p class="question-text">2&nbsp;&nbsp;Question №2. What is 3 - 2?(text)</p>
-        <p class="input-text"><input data-correct-answer="one" type="text" value=""></p>
-      </div>
-      <div class="question">
-        <p class="question-text">3&nbsp;&nbsp;Question №3. What is 7 - 2?(text)</p>
-        <p class="input-text"><input data-correct-answer="five" type="text" value=""></p>
-      </div>
-      <input class="submit" type="submit" value="CHECK">
-      <input id="try-again" class="click-visible" type="button" value="TRY AGAIN">
-      <input id="show-answers" class="click-visible" type="button" value="SHOW ANSWERS"> -->
-  </div>
+    <p>
+      <input type="text" value="" v-model="userAnswer" :class="answerClass">
+    </p>
+ </div>
 </template>
 
 <script>
@@ -24,21 +13,29 @@
     props: ['question'],
     data () {
       return {
-        exposeAnswer: false,
+        showAnswer: false,
         userAnswer: ''
       }
     },
-    methods: {
-      showAnswer () {
-        this.exposeAnswer = false
-      },
-      clearField () {
-        this.textValue = ''
+    computed: {
+      answerClass () {
+        if (this.showAnswer === false) {
+          return ''
+        } else {
+          return (this.isCorrect() === true ? 'correct' : 'incorrect')
+        }
       }
     },
-    computed: {
+    methods: {
       isCorrect () {
-        return true
+        return (this.question.answer === this.userAnswer.toLowerCase())
+      },
+      setShowAnswer (show) {
+        this.showAnswer = show
+      },
+      reset () {
+        this.showAnswer = false
+        this.userAnswer = ''
       }
     }
   }
@@ -46,41 +43,33 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .question-text {
+  .question {
     font-size: 16px;
     font-style: normal;
     letter-spacing: 1.2px;
     color: #151f40;
-    margin-top: 30px;
-    margin-bottom: -5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: 100;
   }
-  .input-text input {
-    margin-left: 0px;
+  .question input {
     width: 400px;
     padding: 5px;
     text-align: left;
     outline-color: #4cb2d4;
-    color: #bbbcbd;
-    font-size: 15px;
+    color: #000;
+    font-size: 16px;
     border: solid 0.5px #979797;
   }
-  .question input.correctAns {
+  .question input.correct {
     color: #56b949 !important;
     background-image: url('../../assets/check-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 380px;
   }
-  .question input.incorrectAns {
+  .question input.incorrect {
     color: #f2341c !important;
-    background-image: url('../../assets/x-circle.png');
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 380px;
-  }
-  .question input.emptyAns {
-    border: 3px solid #f2341c !important;
     background-image: url('../../assets/x-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
