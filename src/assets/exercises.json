@@ -5,14 +5,17 @@
     "description": "For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.",
     "questions": [
       {
+        "number": 1,
         "text": "Name of Artem's daughter?",
         "answer": "katja"
       },
       {
+        "number": 2,
         "text": "What is Irina's favorite desert?",
         "answer": "cake"
       },
       {
+        "number": 3,
         "text": "What is Olya's favorite country?",
         "answer": "russia"
       }

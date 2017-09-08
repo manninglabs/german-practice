@@ -1,6 +1,6 @@
 <template>
   <div class="question">
-    <p>{{ question.text }}</p>
+    <p>{{ question.number }}&nbsp;&nbsp;{{ question.text }}</p>
     <p>
       <input type="text" value="" v-model="userAnswer" :class="answerClass">
     </p>
@@ -19,22 +19,26 @@
     },
     computed: {
       answerClass () {
-        // TODO return the CSS class name to use, either '', 'correct', or 'incorrect'
-        // if we're not showing the answer, return ''
-        // else if are showing the answer, return 'correct' or 'incorrect' based on
-        // the result of this.isCorrect()
+        if (this.showAnswer === false) {
+          return ''
+        } else {
+          return (this.isCorrect() === true ? 'correct' : 'incorrect')
+        }
       }
     },
     methods: {
       isCorrect () {
-        // TODO return true or false based on whether the questions's answer matches
-        // (case insenstitive) to the user's answer
+        return (this.userAnswer.toLowerCase() === this.question.answer.toLowerCase())
       },
       setShowAnswer (show) {
         this.showAnswer = show
       },
+      getShowAnswer () {
+        this.userAnswer = this.question.answer
+      },
       reset () {
-        // TODO reset this form so showAnswer is false and user's text field is cleared
+        this.showAnswer = false
+        this.userAnswer = ''
       }
     }
   }
@@ -54,11 +58,14 @@
   .question input {
     width: 400px;
     padding: 5px;
+    color: #979797;
     text-align: left;
+    margin-left: 22px;
+    padding-left: 15px;
     outline-color: #4cb2d4;
-    color: #000;
     font-size: 16px;
     border: solid 0.5px #979797;
+    margin-bottom: 15px;
   }
   .question input.correct {
     color: #56b949 !important;

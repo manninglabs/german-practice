@@ -1,7 +1,7 @@
 <template>
   <div>
     <site-header />
-    <router-link to="/">&lt; Back</router-link>
+    <router-link to="/">&lt; List of German grammar topics</router-link>
     <div class="loading" v-if="loading">
       Loading...
     </div>
@@ -10,14 +10,19 @@
     </div>
     <div class="exercise-container" v-if="exercise">
       <h2>{{ exercise.name }}</h2>
+      <h3>Exersise {{ exercise.id }}</h3>
       <p class="exercise-description">{{ exercise.description }}</p>
       <div v-for="(q, index) in exercise.questions">
         <fitb-question :question="q" ref="renderedQuestion" />
       </div>
-      <button v-on:click="checkAnswers">Check</button>
+      <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
       <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
         Try Again
       </button>
+      <button v-on:click="seeAnswers" v-if="answersSubmitted">
+        Show Answers
+      </button>
+      <hr />
     </div>
   </div>
 </template>
@@ -73,7 +78,12 @@
       checkAnswers () {
         this.answersSubmitted = true
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
-          // TODO update the questions's 'showAnswer' state
+          this.$refs.renderedQuestion[i].setShowAnswer(true)
+        }
+      },
+      seeAnswers () {
+        for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
+          this.$refs.renderedQuestion[i].getShowAnswer()
         }
       },
       tryAgain () {
@@ -101,6 +111,20 @@
   a:hover {
     color: #56b949;
   }
+  h2 {
+    font-size: 35px;
+    color: #56b949;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #151f40;
+  }
   .exercise-container {
     padding-left: 100px;
     padding-right: 100px;
@@ -112,6 +136,7 @@
     line-height: 1.67;
     letter-spacing: 1.2px;
     color: #151f40;
+    margin-bottom: 50px;
   }
   .exercise-container button {
     background-color: #4cb2d4;
@@ -121,10 +146,14 @@
     border: none;
     padding: 10px 80px;
     outline: none;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 22px;
     margin-bottom: 25px;
     cursor: pointer;
     text-transform: uppercase;
+  }
+  .exercise-container button.neutral-button {
+    background-color: #a6aaab;
   }
   .exercise-container button:active {
     background-color: #56b949;
