@@ -16,6 +16,9 @@
         <fitb-question :question="q" ref="renderedQuestion" />
       </div>
       <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
+      <div class="statistics" v-if="answersSubmitted">
+        <p><b>1</b> of <b>3</b> questions answered correctly. Your latest result: <b>33%</b>.</p>
+      </div>
       <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
         Try Again
       </button>
@@ -151,6 +154,15 @@
     margin-bottom: 25px;
     cursor: pointer;
     text-transform: uppercase;
+  }
+  .statistics {
+    background-color: #4cb2d4;
+    margin-left: 22px;
+  }
+  .statistics p {
+    padding: 30px 20px;
+    letter-spacing: 2px;
+    color: #fff;
   }
   .exercise-container button.neutral-button {
     background-color: #a6aaab;
