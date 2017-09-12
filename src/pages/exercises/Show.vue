@@ -17,7 +17,7 @@
       </div>
       <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
       <div class="statistics" v-if="answersSubmitted">
-        <p><b>1</b> of <b>3</b> questions answered correctly. Your latest result: <b>33%</b>.</p>
+        <p><b v-model="correct">{{ correct }}</b> of <b v-model="numberOfQuestions">{{ numberOfQuestions }}</b> questions answered correctly. Your latest result: <b v-model="result">{{ result }}</b><b>%</b>.</p>
       </div>
       <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
         Try Again
@@ -38,7 +38,10 @@
         loading: false,
         error: null,
         exercise: null,
-        answersSubmitted: false
+        answersSubmitted: false,
+        correct: 0,
+        numberOfQuestions: '',
+        result: ''
       }
     },
     created () {
@@ -83,6 +86,14 @@
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
           this.$refs.renderedQuestion[i].setShowAnswer(true)
         }
+        this.numberOfQuestions = this.$refs.renderedQuestion.length
+        for (var j = 0; j < this.$refs.renderedQuestion.length; j++) {
+          if (this.$refs.renderedQuestion[j].isCorrect()) {
+            this.correct++
+          }
+        }
+        var calculationInterest = (100 / this.numberOfQuestions * this.correct)
+        this.result = Math.floor(calculationInterest)
       },
       seeAnswers () {
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
@@ -94,6 +105,7 @@
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
           this.$refs.renderedQuestion[i].reset()
         }
+        this.correct = ''
         // reload data, thus triggering reset of page state
         this.fetchData()
       }
