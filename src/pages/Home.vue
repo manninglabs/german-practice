@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-banner />
-    <h1>Exercises</h1>
+    <h1>Our Exercises</h1>
     <div v-for="e in exercises">
       <router-link class="exercise-list-item" :to="{ name: 'exercise', params: { id: e.id, exercise: e }}">Exercise {{ e.id }}</router-link>
     </div>
