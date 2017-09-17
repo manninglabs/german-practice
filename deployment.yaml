@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: german-practice
-          image: gcr.io/german-practice/german-practice:0.0.1
+          image: gcr.io/german-practice/german-practice:0.0.2
           imagePullPolicy: Always
           ports:
           - containerPort: 5000
