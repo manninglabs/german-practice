@@ -86,12 +86,15 @@
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
           this.$refs.renderedQuestion[i].setShowAnswer(true)
         }
+        // get the number of questions
         this.numberOfQuestions = this.$refs.renderedQuestion.length
+        // counts the number of correct answers
         for (var j = 0; j < this.$refs.renderedQuestion.length; j++) {
           if (this.$refs.renderedQuestion[j].isCorrect()) {
             this.correct++
           }
         }
+        // considers the percentage of correct answers
         var calculationInterest = (100 / this.numberOfQuestions * this.correct)
         this.result = Math.floor(calculationInterest)
       },
