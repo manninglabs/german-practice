@@ -3,7 +3,6 @@
     <div id="main-banner">
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />master German grammar</p>
-      <!-- <router-link :to="{ name: 'list-exercises' }">Start Practicing</router-link> -->
     </div>
     <h1>Our Exercises</h1>
     <div v-for="e in exercises">
@@ -18,7 +17,6 @@ import {grpc, BrowserHeaders, Code} from 'grpc-web-client'
 import {Service} from '../proto/services_pb_service'
 import {BlankQuery, Exercise, ExercisesList} from '../proto/services_pb'
 
-/* eslint-disable no-new */
 @Component({
   name: 'home'
 })
