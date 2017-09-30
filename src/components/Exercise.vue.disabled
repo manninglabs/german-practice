@@ -23,10 +23,15 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Exercises1'
-  }
+<script lang="ts">
+import {Vue, Component} from 'vue-property-decorator'
+
+@Component({
+  name: 'exercise'
+})
+export default class Exercise extends Vue {
+
+}
 </script>
 <style scoped>
   #exercise-1 {

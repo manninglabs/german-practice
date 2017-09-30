@@ -6,10 +6,14 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Footer'
-  }
+<script lang="ts">
+import {Vue, Component} from 'vue-property-decorator'
+
+@Component({
+  name: 'site-footer'
+})
+export default class SiteFooter extends Vue {
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

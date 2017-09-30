@@ -4,10 +4,14 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Header'
-  }
+<script lang="ts">
+import {Vue, Component} from 'vue-property-decorator'
+
+@Component({
+  name: 'site-header'
+})
+export default class SiteHeader extends Vue {
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
