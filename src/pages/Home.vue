@@ -3,10 +3,13 @@
     <div id="main-banner">
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />master German grammar</p>
+      <a href="#exercise-list">Start Practicing</a>
     </div>
-    <h1>Our Exercises</h1>
+    <a name="exercise-list" />
     <div v-for="e in exercises">
-      <router-link class="exercise-list-item" :to="{ name: 'show-exercise', params: { id: e.getId() }}">{{ e.getTitle() }}</router-link>
+      <router-link class="exercise-list-item" :to="{ name: 'show-exercise', params: { id: e.getId() }}">
+        Exercise {{ e.getId() }}: &quot;{{ e.getTitle() }}&quot;
+      </router-link>
     </div>
   </div>
 </template>

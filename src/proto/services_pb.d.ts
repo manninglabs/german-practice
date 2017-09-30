@@ -91,6 +91,11 @@ export class Exercise extends jspb.Message {
   getTopic(): string;
   setTopic(value: string): void;
 
+  clearQuestionsList(): void;
+  getQuestionsList(): Array<Question>;
+  setQuestionsList(value: Array<Question>): void;
+  addQuestions(value?: Question, index?: number): Question;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Exercise.AsObject;
   static toObject(includeInstance: boolean, msg: Exercise): Exercise.AsObject;
@@ -106,6 +111,39 @@ export namespace Exercise {
     id: number,
     title: string,
     topic: string,
+    questionsList: Array<Question.AsObject>,
+  }
+}
+
+export class Question extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
+  getExerciseId(): number;
+  setExerciseId(value: number): void;
+
+  getText(): string;
+  setText(value: string): void;
+
+  getAnswer(): string;
+  setAnswer(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Question.AsObject;
+  static toObject(includeInstance: boolean, msg: Question): Question.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Question, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Question;
+  static deserializeBinaryFromReader(message: Question, reader: jspb.BinaryReader): Question;
+}
+
+export namespace Question {
+  export type AsObject = {
+    id: number,
+    exerciseId: number,
+    text: string,
+    answer: string,
   }
 }
 
