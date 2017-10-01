@@ -1,0 +1,7 @@
+german-practice
+log.out
+nohup.out
+.idea/*
+*.iml
+*.DS_Store
+
