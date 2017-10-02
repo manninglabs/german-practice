@@ -1,5 +1,11 @@
 # german-practice
 
+## Run Locally
+
+```
+make ver=latest env=local run
+```
+
 ## Deployment
 
 ```

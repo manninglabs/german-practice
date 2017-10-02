@@ -31,9 +31,12 @@ export default class Home extends Vue {
   }
 
   fetchData () {
+    const grpcHost = (process.env.GRPC_HOST || '')
     const request = new BlankQuery()
+    console.log(grpcHost)
+
     grpc.invoke(Service.ListExercises, {
-      host: 'http://localhost:8080',
+      host: grpcHost,
       request: request,
       onMessage: (exercisesList: ExercisesList) => {
         this.exercises = exercisesList.getExercisesList()

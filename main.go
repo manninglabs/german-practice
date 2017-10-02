@@ -4,8 +4,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/seenickcode/german-practice/core"
-	"github.com/seenickcode/german-practice/proto"
+	"github.com/manninglabs/german-practice/core"
+	"github.com/manninglabs/german-practice/proto"
 )
 
 type ResponseErr struct {

@@ -9,7 +9,7 @@ import (
 	"log"
 
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
-	"github.com/seenickcode/german-practice/core"
+	"github.com/manninglabs/german-practice/core"
 	"github.com/urfave/negroni"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"

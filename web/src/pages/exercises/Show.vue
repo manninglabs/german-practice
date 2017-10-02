@@ -58,10 +58,13 @@ export default class ShowExercise extends Vue {
     '$route': 'fetchData'
   }
   fetchData () {
+    const grpcHost = (process.env.GRPC_HOST || '')
+    var id: number = Number(this.$route.params['id'] || '')
     const request = new IDQuery()
-    request.setId(3)
+    request.setId(id)
+
     grpc.invoke(Service.FetchExercise, {
-      host: 'http://localhost:8080',
+      host: grpcHost,
       request: request,
       onMessage: (exercise: Exercise) => {
         this.exercise = exercise
