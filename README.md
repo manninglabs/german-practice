@@ -1,18 +1,22 @@
-# Starting gRPC Web Server
+# Use
+
+## Starting Localhost
 
 ```
-$GOPATH/bin/grpcwebproxy \
-    --server_tls_cert_file=cert.pem \
-    --server_tls_key_file=key.pem \
-    --backend_addr=localhost:50051 \
-    --backend_tls_noverify
+make ver=0.0.1 env=local run
 ```
 
-# Reference
-
-## Generate gRPC Web Server TLS Cert and Key
+## Deploy
 
 ```
-openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out cert.pem -keyout key.pem
+make ver=latest env=dev build push
 ```
 
+## Test Docker Image
+
+Can be used to test running the image before deployment.
+
+```
+make ver=latest env=dev build
+make ver=latest env=dev test
+```

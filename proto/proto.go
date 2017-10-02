@@ -42,26 +42,21 @@ func (p *Proto) Listen(port int) {
 	RegisterServiceServer(p.server, p)
 	reflection.Register(p.server)
 
+	// use grpcweb to open a proxy HTTP port for our gRPC server
 	wrappedGrpc := grpcweb.WrapServer(p.server)
-
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", http.HandlerFunc(func(resp http.ResponseWriter, req *http.Request) {
-		log.Println("handling gRPC req")
-		if wrappedGrpc.IsGrpcWebRequest(req) {
-			wrappedGrpc.ServeHTTP(resp, req)
-		}
-		// Fall back to other servers.
-		http.DefaultServeMux.ServeHTTP(resp, req)
+		wrappedGrpc.ServeHTTP(resp, req)
 	}))
 	n := negroni.Classic() // Includes some default middlewares
 	n.UseHandler(mux)
-
 	go func() {
-		port := 3000
+		port := 8080
 		log.Printf("listening on HTTP port %v\n", port)
 		http.ListenAndServe(fmt.Sprintf(":%v", port), n)
 	}()
 
+	// start our gRPC server
 	log.Println("starting gRPC server")
 	if err := p.server.Serve(lis); err != nil {
 		log.Fatalf("gRPC service failed to serve: %v", err)
