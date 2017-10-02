@@ -1,1 +1,1 @@
-GRPC_HOST=http://localhost:8080
+USE_CONFIG=dev.env

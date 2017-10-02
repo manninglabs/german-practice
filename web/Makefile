@@ -14,16 +14,13 @@ run:
 	yarn dev
 
 build:
-	GOOS=linux go build -o app
+	GRPC_HOST=$(GRPC_HOST) \
+	yarn build
 	docker build -t gcr.io/$(gcr_project)/$(gcr_image):$(ver) .
-	rm -rf app
+	rm -rf dist
 
 test:
-	docker run --rm -it -p 8080:8080 \
-	-e API_VERSION=$(ver) \
-	-e DB_HOST=$(DB_HOST) \
-	-e DB_NAME=$(DB_NAME) \
-	-e DB_PASSWORD=$(DB_PASSWORD) \
+	docker run --rm -it -p 5000:5000 \
 	gcr.io/$(gcr_project)/$(gcr_image):$(ver)
 
 push:

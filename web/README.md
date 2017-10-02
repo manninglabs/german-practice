@@ -1,32 +1,23 @@
-# german-practice
+# Use
 
-## Run Locally
-
-```
-make ver=latest env=local run
-```
-
-## Deployment
+## Starting Localhost
 
 ```
-npm run build
-git add .
-git commit -am "<message>"
-docker build -t gcr.io/german-practice/german-practice:<ver> .
+make ver=0.0.1 env=local run
 ```
 
-Then (optional) test via `docker run --rm -it -p 5000:5000 gcr.io/german-practice/german-practice:<ver>`
-
-Then:
+## Deploy
 
 ```
-gcloud docker -- push gcr.io/german-practice/german-practice:<ver>
-kubectl set image deployment/german-practice german-practice=gcr.io/german-practice/german-practice:<ver>
-gcloud container clusters get-credentials german-practice-cluster
-kubectl get nodes
-kubectl create -f service.yaml
-kubectl create -f deployment.yaml
-kubectl get pods
-kubectl get svc
-kubectl logs -f POD-NAME
+make ver=latest env=dev build push
+kubectl <create|replace> -f kubernetes.yaml
+```
+
+## Test Docker Image
+
+Can be used to test running the image before deployment.
+
+```
+make ver=latest env=dev build
+make ver=latest env=dev test
 ```

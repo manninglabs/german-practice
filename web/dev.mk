@@ -1,1 +1,1 @@
-GRPC_HOST=http://35.198.167.216:8080
+USE_CONFIG=dev.env
