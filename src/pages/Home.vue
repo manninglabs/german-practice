@@ -3,7 +3,7 @@
     <div id="main-banner">
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />
-         master German grammar</p>
+         master German grammar!</p>
       <a href="#exercise-list">Start Practicing</a>
     </div>
     <a name="exercise-list" />

@@ -8,7 +8,7 @@ import AuthService from '../services/auth'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history', // NOTE disabled unfortunately due to this https://goo.gl/7A49gj
   routes: [
     {
       path: '/',

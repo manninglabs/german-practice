@@ -1,1 +1,1 @@
-USE_CONFIG=dev.env
+CONFIG_ENV=local

@@ -10,16 +10,16 @@ gcr_project = german-practice
 gcr_image = german-practice-web
 
 run:
-	yarn dev
+	CONFIG_ENV=$(CONFIG_ENV) yarn dev
 
-build:
-	USE_CONFIG=$(USE_CONFIG) yarn build
+buildimage:
+	CONFIG_ENV=$(CONFIG_ENV) yarn build
 	docker build -t gcr.io/$(gcr_project)/$(gcr_image):$(ver) .
 	rm -rf dist
 
-test:
+tryimage:
 	docker run --rm -it -p 5000:5000 \
 	gcr.io/$(gcr_project)/$(gcr_image):$(ver)
 
-push:
+pushimage:
 	gcloud docker -- push gcr.io/$(gcr_project)/$(gcr_image):$(ver)

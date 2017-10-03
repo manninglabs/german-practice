@@ -13,12 +13,6 @@ var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
 
-// override env, because we want to 'build' with webpack.prod.conf but typically
-// use a config in another environment
-var useConfigFile = '../config/' + process.env.USE_CONFIG
-console.log('overriding with config \'' + useConfigFile + '\'')
-env = require(useConfigFile)
-
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -31,6 +25,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html

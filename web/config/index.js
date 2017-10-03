@@ -1,9 +1,13 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
+// NOTE hack to allow control over which config we want to use while still building with webpack prod settings
+const configFile = './' + (process.env.CONFIG_ENV || 'prod') + '.env'
+console.log('using config \'' + configFile + '\'')
+
 module.exports = {
   build: {
-    env: require('./prod.env'),
+    env: require(configFile),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
@@ -22,7 +26,7 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
   dev: {
-    env: require('./dev.env'),
+    env: require(configFile),
     port: 5000,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
