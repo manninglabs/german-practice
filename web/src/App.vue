@@ -1,20 +1,14 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <site-footer />
   </div>
 </template>
 
-<script type="ts">
+<script lang="ts">
 import {Vue, Component} from 'vue-property-decorator'
-import SiteHeader from '@/components/SiteHeader'
-import SiteFooter from '@/components/SiteFooter'
 
 @Component({
-  name: 'app',
-  components: {
-    SiteHeader, SiteFooter
-  }
+  name: 'app'
 })
 export default class App extends Vue {
 }

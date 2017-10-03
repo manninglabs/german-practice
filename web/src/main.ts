@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import SiteNav from '@/components/SiteNav'
 import SiteHeader from '@/components/SiteHeader'
 import SiteFooter from '@/components/SiteFooter'
 
 Vue.config.productionTip = false
 
+// register global components
+Vue.component('site-nav', SiteNav)
 Vue.component('site-header', SiteHeader)
 Vue.component('site-footer', SiteFooter)
 
