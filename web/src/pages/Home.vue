@@ -4,6 +4,7 @@
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />master German grammar</p>
       <a href="#exercise-list">Start Practicing</a>
+      <a href="#" @click.prevent="login">Login</a>
     </div>
     <a name="exercise-list" />
     <div v-for="e in exercises">
@@ -28,6 +29,10 @@ export default class Home extends Vue {
 
   mounted () {
     this.fetchData()
+  }
+
+  login () {
+    console.log('logging in')
   }
 
   fetchData () {

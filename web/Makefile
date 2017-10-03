@@ -10,12 +10,10 @@ gcr_project = german-practice
 gcr_image = german-practice-web
 
 run:
-	GRPC_HOST=$(GRPC_HOST) \
 	yarn dev
 
 build:
-	GRPC_HOST=$(GRPC_HOST) \
-	yarn build
+	USE_CONFIG=$(USE_CONFIG) yarn build
 	docker build -t gcr.io/$(gcr_project)/$(gcr_image):$(ver) .
 	rm -rf dist
 
