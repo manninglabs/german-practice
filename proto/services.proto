@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package proto;
+
+
+service Service {
+  rpc APIVersion (BlankQuery) returns (StringMessage) {}
+  rpc ListExercises (BlankQuery) returns (ExercisesList) {}
+  rpc FetchExercise (IDQuery) returns (Exercise) {}
+}
+
+message StringMessage {
+  string body = 1;
+}
+
+message BlankQuery {
+}
+
+message IDQuery {
+  int64 id = 1;
+}
+
+message ExercisesList {
+  repeated Exercise exercises = 1;
+}
+
+message Exercise {
+  int64 id = 1;
+  string title = 2;
+  string topic = 3;
+  repeated Question questions = 4;
+}
+
+message Question {
+  int64 id = 1;
+  int64 exercise_id = 2;
+  string text = 3;
+  string answer = 4;
+}

@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: german-practice-api
+  labels:
+    app: german-practice-api
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: german-practice-api
+    spec:
+      containers:
+        - name: german-practice-api
+          image: gcr.io/german-practice/german-practice-api:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
+          env:
+          - name: API_VERSION
+            value: "latest"
+          - name: DB_HOST
+            value: "35.198.98.213" # TODO use Kubernetes templates pulling from *.mk files
+          - name: DB_NAME
+            value: "germanpractice"
+          - name: DB_PASSWORD
+            value: "1234" # TODO use Kubernetes secrets
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: german-practice-api-service
+spec:
+  selector:
+    app: german-practice-api
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer

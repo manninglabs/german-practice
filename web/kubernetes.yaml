@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: german-practice-web
+  labels:
+    app: german-practice-web
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: german-practice-web
+    spec:
+      containers:
+        - name: german-practice-web
+          image: gcr.io/german-practice/german-practice-web:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 5000
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: german-practice-web-service
+spec:
+  selector:
+    app: german-practice-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: LoadBalancer
