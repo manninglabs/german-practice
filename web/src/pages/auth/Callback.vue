@@ -1,6 +1,6 @@
 <template>
   <div class="spinner">
-    <img src="@/assets/loading.svg" alt="loading"/>
+    <img src="../../assets/loading.svg" alt="loading"/>
   </div>
 </template>
 
@@ -9,18 +9,16 @@ import {Vue, Component} from 'vue-property-decorator'
 import AuthService from '../../services/auth'
 
 @Component({
-  name: 'auth0-callback',
-  props: {
-    auth: AuthService
-  }
+  name: 'auth-callback'
 })
-export default class Auth0Callback extends Vue {
+export default class AuthCallback extends Vue {
 
   mounted () {
     console.log('callback component mounted, handling authentication')
-    debugger
-    // TODO try to move property to a class member instead
-    this.$props.auth.handleAuthentication()
+    this.$nextTick(() => {
+      AuthService.handleAuthentication()
+      this.$router.push('/')
+    })
   }
 }
 </script>

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
 import ShowExercise from '@/pages/exercises/Show'
-import Auth0Callback from '@/pages/auth0/Callback'
+import AuthCallback from '@/pages/auth/Callback'
+import AuthService from '../services/auth'
 
 Vue.use(Router)
 
@@ -15,14 +16,15 @@ export default new Router({
       component: Home
     },
     {
-      path: '/auth0/callback',
-      name: 'auth0-callback',
-      component: Auth0Callback
+      path: '/auth/callback',
+      name: 'auth-callback',
+      component: AuthCallback
     },
     {
       path: '/exercise/:id',
       name: 'show-exercise',
       component: ShowExercise,
+      beforeEnter: AuthService.requireAuth,
       props: true
     }
   ]

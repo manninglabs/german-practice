@@ -21,6 +21,7 @@
       </button>
       <hr />
     </div>
+    <site-footer />
   </div>
 </template>
 

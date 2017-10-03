@@ -1,10 +1,10 @@
 <template>
   <div>
+    <site-nav :auth="auth" />
     <div id="main-banner">
       <h1>Practice Grammar</h1>
       <p>Effective drill exercises to help you<br />master German grammar</p>
       <a href="#exercise-list">Start Practicing</a>
-      <a href="#" @click.prevent="login">Login</a>
     </div>
     <a name="exercise-list" />
     <div v-for="e in exercises">
@@ -12,6 +12,7 @@
         Exercise {{ e.getId() }}: &quot;{{ e.getTitle() }}&quot;
       </router-link>
     </div>
+    <site-footer />
   </div>
 </template>
 
@@ -22,17 +23,14 @@ import {Service} from '../proto/services_pb_service'
 import {BlankQuery, Exercise, ExercisesList} from '../proto/services_pb'
 
 @Component({
-  name: 'home'
+  name: 'home',
+  props: ['auth']
 })
 export default class Home extends Vue {
   exercises: Array<Exercise> = [];
 
   mounted () {
     this.fetchData()
-  }
-
-  login () {
-    console.log('logging in')
   }
 
   fetchData () {
