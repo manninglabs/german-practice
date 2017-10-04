@@ -1,41 +1,60 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <img src="./assets/logo.png">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+    <ul>
+      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
+      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+    </ul>
+    <h2>Ecosystem</h2>
+    <ul>
+      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
+      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+    </ul>
   </div>
 </template>
 
-<script lang="ts">
-import {Vue, Component} from 'vue-property-decorator'
-
-@Component({
-  name: 'app'
-})
-export default class App extends Vue {
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
 }
 </script>
 
 <style>
-  body {
-    font-family: 'Futura', sans-serif;
-    margin: 0px;
-  }
-  h1 {
-    font-size: 35px;
-    color: #56b949;
-    letter-spacing: 2px;
-    padding-left: 100px;
-    margin-top: 40px;
-    font-weight: 100;
-  }
-  h2 {
-    font-size: 17px;
-    color: #151f40;
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    margin-top: 40px;
-  }
-  hr {
-    height: 0.2px;
-    background-color: #999999;
-  }
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
 </style>

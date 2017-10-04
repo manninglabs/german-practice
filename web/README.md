@@ -1,26 +1,18 @@
-# Use
+# web
 
-## Starting Localhost
+> A Vue.js project
 
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
 ```
-make env=local ver=0.0.5 run
-```
 
-## Deploy
-
-1.
-```
-make ver=latest env=dev buildimage pushimage
-```
-
-2. Then update image tag in `deployment.yaml`
-3. Then run `kubectl apply -f deployment.yaml`
-
-## Test Docker Image
-
-Can be used to test running the image before deployment.
-
-```
-make ver=latest env=dev buildimage
-make ver=latest env=dev testimage
-```
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
