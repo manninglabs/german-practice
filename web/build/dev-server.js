@@ -1,4 +1,5 @@
 require('./check-versions')()
+var history = require('connect-history-api-fallback')
 
 var config = require('../config')
 
@@ -62,6 +63,7 @@ app.use(devMiddleware)
 // compilation error display
 app.use(hotMiddleware)
 
+
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
@@ -82,6 +84,8 @@ devMiddleware.waitUntilValid(() => {
   }
   _resolve()
 })
+
+app.use(history({ verbose: true }))
 
 var server = app.listen(port)
 
