@@ -17,7 +17,7 @@ buildimage:
 	docker build -t gcr.io/$(gcr_project)/$(gcr_image):$(ver) .
 	rm -rf dist
 
-tryimage:
+runimage:
 	docker run --rm -it -p 5000:5000 \
 	gcr.io/$(gcr_project)/$(gcr_image):$(ver)
 

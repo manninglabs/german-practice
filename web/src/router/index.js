@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import Home from '@/pages/Home'
 import ShowExercise from '@/pages/exercises/Show'
 import AuthCallback from '@/pages/auth/Callback'
-import AuthService from '../services/auth'
+// import AuthService from '../services/auth'
 
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history', // NOTE disabled unfortunately due to this https://goo.gl/7A49gj
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -24,7 +24,7 @@ export default new Router({
       path: '/exercise/:id',
       name: 'show-exercise',
       component: ShowExercise,
-      beforeEnter: AuthService.requireAuth,
+      // beforeEnter: AuthService.requireAuth,
       props: true
     }
   ]
