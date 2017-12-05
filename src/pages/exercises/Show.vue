@@ -10,10 +10,58 @@
     </div>
     <div class="exercise-container" v-if="exercise">
       <h2>{{ exercise.name }}</h2>
-      <h3>Exersise {{ exercise.id }}</h3>
-      <p class="exercise-description">{{ exercise.description }}</p>
-      <div v-for="(q, index) in exercise.questions">
-        <fitb-question :question="q" ref="renderedQuestion" />
+      <h3>Exersise 1</h3>
+      <div v-for="(q, index) in exercise.exercises">
+        <p class="exercise-description">{{ q.descriptionFirstExercise }}</p>
+      </div>
+      <div v-for="(q, index) in exercise.exercises">
+        <div v-for="(z, index) in q.exerсiseFirstType">
+          <fitb-question :questionFirstType="z" ref="renderedQuestion"/>
+        </div>
+      </div>
+      <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
+      <div class="statistics" v-if="answersSubmitted">
+        <p><b v-model="correct">{{ correct }}</b> of <b v-model="numberOfQuestions">{{ numberOfQuestions }}</b> questions answered correctly. Your latest result: <b v-model="result">{{ result }}</b><b>%</b>.</p>
+      </div>
+      <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
+        Try Again
+      </button>
+      <button v-on:click="seeAnswers" v-if="answersSubmitted">
+        Show Answers
+      </button>
+      <hr />
+    </div>
+    <div class="exercise-container" v-if="exercise">
+      <h3>Exersise 2</h3>
+      <div v-for="(q, index) in exercise.exercises">
+        <p class="exercise-description">{{ q.descriptionSecondExercise }}</p>
+      </div>
+      <div v-for="(q, index) in exercise.exercises">
+        <div v-for="(z, index) in q.exerciseSecondType">
+          <question-second :questionSecondType="z" ref="renderedQuestion"/>
+        </div>
+      </div>
+      <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
+      <div class="statistics" v-if="answersSubmitted">
+        <p><b v-model="correct">{{ correct }}</b> of <b v-model="numberOfQuestions">{{ numberOfQuestions }}</b> questions answered correctly. Your latest result: <b v-model="result">{{ result }}</b><b>%</b>.</p>
+      </div>
+      <button v-on:click="tryAgain" v-if="answersSubmitted" class="neutral-button">
+        Try Again
+      </button>
+      <button v-on:click="seeAnswers" v-if="answersSubmitted">
+        Show Answers
+      </button>
+      <hr />
+    </div>
+    <div class="exercise-container" v-if="exercise">
+      <h3>Exersise 3</h3>
+      <div v-for="(q, index) in exercise.exercises">
+        <p class="exercise-description">{{ q.descriptionThirdExercise }}</p>
+      </div>
+      <div v-for="(q, index) in exercise.exercises">
+        <div v-for="(z, index) in q.exerciseThirdType">
+          <question-third :questionThirdType="z" ref="renderedQuestion"/>
+        </div>
       </div>
       <button v-on:click="checkAnswers" v-if="!answersSubmitted">Check</button>
       <div class="statistics" v-if="answersSubmitted">
@@ -53,6 +101,11 @@
       // call again the method if the route changes
       '$route': 'fetchData'
     },
+    computed: {
+      test () {
+        return this.result
+      }
+    },
     methods: {
       fetchData () {
         // fetch the correct exercise by ID
@@ -62,6 +115,8 @@
         this.error = this.exercise = null
         this.loading = true
         this.answersSubmitted = false
+        this.correct = 0
+        this.result = 0
         var exerciseData = require('../../assets/exercises.json')
         // find the correct exercise from list of exercises we've fetched
         for (var i = 0; i < exerciseData.length; i++) {
@@ -102,6 +157,7 @@
         for (var i = 0; i < this.$refs.renderedQuestion.length; i++) {
           this.$refs.renderedQuestion[i].getShowAnswer()
         }
+        this.fetchData()
       },
       tryAgain () {
         // clears all fields input
@@ -142,6 +198,7 @@
     letter-spacing: 1.2px;
     text-align: left;
     color: #151f40;
+    margin-top: 40px;
   }
   .exercise-container {
     padding-left: 100px;
@@ -154,7 +211,7 @@
     line-height: 1.67;
     letter-spacing: 1.2px;
     color: #151f40;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .exercise-container button {
     background-color: #4cb2d4;

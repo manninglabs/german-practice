@@ -15,6 +15,7 @@ export default {
   body {
     font-family: 'Futura', sans-serif;
     margin: 0px;
+    min-width: 700px;
   }
   h2 {
     font-size: 17px;

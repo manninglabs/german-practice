@@ -2,22 +2,152 @@
   {
     "id": 1,
     "name": "The Laptev Family",
-    "description": "For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.",
-    "questions": [
+    "exercises" : 
+    [
       {
-        "number": 1,
-        "text": "Name of Artem's daughter?",
-        "answer": "katja"
+        "descriptionFirstExercise": "For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.",
+        "exerсiseFirstType": 
+        [
+          {
+            "number": 1,
+            "text": "Name of Artem's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text": "What is Irina's favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text": "What is Olya's favorite country?",
+            "answer": "russia"
+          }
+        ]
       },
       {
-        "number": 2,
-        "text": "What is Irina's favorite desert?",
-        "answer": "cake"
+        "descriptionSecondExercise": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum aliquam unde adipisci, obcaecati porro vitae illum temporibus. Eveniet hic fuga, vel nobis adipisci ratione reprehenderit! Sequi repellat, facere sed.",
+        "exerciseSecondType": 
+        [
+          {
+            "number": 1,
+            "text1": "Name of",
+            "text2": "Artem's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text1": "What is Irina's ",
+            "text2": "favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text1": "What is Olya's ",
+            "text2": "favorite country?",
+            "answer": "russia"
+          }
+        ]
       },
       {
-        "number": 3,
-        "text": "What is Olya's favorite country?",
-        "answer": "russia"
+        "descriptionThirdExercise": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum aliquam unde adipisci, obcaecati porro vitae illum temporibus. Eveniet hic fuga, vel nobis adipisci ratione reprehenderit! Sequi repellat, facere sed.",
+        "exerciseThirdType": 
+        [
+          {
+            "number": 1,
+            "text1": "Name of",
+            "text2": "Ilja's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text1": "What is Peter's ",
+            "text2": "favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text1": "What is Vika's ",
+            "text2": "favorite country?",
+            "answer": "russia"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "The Manning Family",
+    "exercises" : 
+    [
+      {
+        "descriptionFirstExercise": "For this exercise, you will be given a paragraph consisting of 10-20 sentences with missing words. In order to complete the exercise, you must fill in each blank with the correct German adjective. All adjectives must have the correct endings to match the gender and case of the rest of the sentence.",
+        "exerсiseFirstType": 
+        [
+          {
+            "number": 1,
+            "text": "Name of Nick's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text": "What is Jenia's favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text": "What is Olya's favorite country?",
+            "answer": "russia"
+          }
+        ]
+      },
+      {
+        "descriptionSecondExercise": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum aliquam unde adipisci, obcaecati porro vitae illum temporibus. Eveniet hic fuga, vel nobis adipisci ratione reprehenderit! Sequi repellat, facere sed.",
+        "exerciseSecondType": 
+        [
+          {
+            "number": 1,
+            "text1": "Name of",
+            "text2": "Nick's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text1": "What is Jenia's ",
+            "text2": "favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text1": "What is Olya's ",
+            "text2": "favorite country?",
+            "answer": "russia"
+          }
+        ]
+      },
+      {
+        "descriptionThirdExercise": "Lorem ipsum dolor sit amet, c Veritatis rerum aliquam unde adipisci, obcaecati porro vitae illum temporibus. Eveniet hic fuga, vel nobis adipisci ratione reprehenderit! Sequi repellat, facere sed.",
+        "exerciseThirdType": 
+        [
+          {
+            "number": 1,
+            "text1": "Name of",
+            "text2": "Kirill's daughter?",
+            "answer": "katja"
+          },
+          {
+            "number": 2,
+            "text1": "What is Anna's ",
+            "text2": "favorite desert?",
+            "answer": "cake"
+          },
+          {
+            "number": 3,
+            "text1": "What is Olya's ",
+            "text2": "favorite country?",
+            "answer": "russia"
+          }
+        ]
       }
     ]
   }

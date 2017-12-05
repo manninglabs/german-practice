@@ -8,7 +8,9 @@ Vue.config.productionTip = false
 
 Vue.component('site-header', require('./components/Header.vue'))
 Vue.component('site-footer', require('./components/Footer.vue'))
-Vue.component('fitb-question', require('./components/questions/FITBQuestion.vue'))
+Vue.component('fitb-question', require('./components/questions/Question1.vue'))
+Vue.component('question-second', require('./components/questions/Question2.vue'))
+Vue.component('question-third', require('./components/questions/Question3.vue'))
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,16 +1,15 @@
 <template>
   <div class="question">
-    <p>{{ question.number }}&nbsp;&nbsp;{{ question.text }}</p>
-    <p>
-      <input type="text" value="" v-model="userAnswer" :class="answerClass">
-    </p>
+    <p>{{ questionThirdType.number }}&nbsp;&nbsp;{{ questionThirdType.text1 }}
+      <input type="text" value="" maxlength="4" v-model="userAnswer" :class="answerClass">
+    {{ questionThirdType.text2 }}</p>
  </div>
 </template>
 
 <script>
   export default {
-    name: 'fitb-question',
-    props: ['question'],
+    name: 'question-third',
+    props: ['questionThirdType'],
     data () {
       return {
         showAnswer: false,
@@ -28,13 +27,13 @@
     },
     methods: {
       isCorrect () {
-        return (this.userAnswer.toLowerCase() === this.question.answer.toLowerCase())
+        return (this.userAnswer.toLowerCase() === this.questionThirdType.answer.toLowerCase())
       },
       setShowAnswer (show) {
         this.showAnswer = show
       },
       getShowAnswer () {
-        this.userAnswer = this.question.answer
+        this.userAnswer = this.questionThirdType.answer
       },
       reset () {
         this.showAnswer = false
@@ -56,11 +55,11 @@
     font-weight: 100;
   }
   .question input {
-    width: 400px;
+    width: 70px;
     padding: 5px;
     color: #979797;
     text-align: left;
-    margin-left: 22px;
+    margin-left: 0px;
     padding-left: 15px;
     outline-color: #4cb2d4;
     font-size: 16px;
@@ -72,13 +71,13 @@
     background-image: url('../../assets/check-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position: 380px;
+    background-position: 60px;
   }
   .question input.incorrect {
     color: #f2341c !important;
     background-image: url('../../assets/x-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position: 380px;
+    background-position: 60px;
   }
 </style>
