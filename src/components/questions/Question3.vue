@@ -1,7 +1,7 @@
 <template>
   <div class="question">
     <p>{{ questionThirdType.number }}&nbsp;&nbsp;{{ questionThirdType.text1 }}
-      <input type="text" value="" maxlength="4" v-model="userAnswer" :class="answerClass">
+      <input type="text" value="" v-model="userAnswer" :class="answerClass">
     {{ questionThirdType.text2 }}</p>
  </div>
 </template>

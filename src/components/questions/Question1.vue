@@ -2,7 +2,7 @@
   <div class="question">
     <p>{{ questionFirstType.number }}&nbsp;&nbsp;{{ questionFirstType.text }}</p>
     <p>
-      <input type="text" value="" maxlength="15" v-model="userAnswer" :class="answerClass">
+      <input type="text" value="" v-model="userAnswer" :class="answerClass">
     </p>
  </div>
 </template>

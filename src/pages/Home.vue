@@ -9,7 +9,7 @@
     <a name="exercise-list" />
     <div v-for="e in exercises">
       <router-link class="exercise-list-item" :to="{ name: 'exercise', params: { id: e.id }}">
-        Exercise {{ e.id }}: &quot;{{ e.name }}&quot;
+        Grammar Topic Number {{ e.id }}: &quot;{{ e.name }}&quot;
       </router-link>
     </div>
   </div>
