@@ -324,21 +324,45 @@
         [
           {
             "number": 1,
-            "text1": "Wo wohnen deine Eltern? - Meine Eltern sind geschieden. Meine Mutter lebt in Köln m... ",
-            "text2": "Vater in Hannover.",
-            "answer": "ein"
+            "text1": "Maria hat viele Bücher. Wo stehen ",
+            "text2": "Bücher?",
+            "answer": "ihre"
           },
           {
             "number": 2,
-            "text1": "Wie groß ist e...",
-            "text2": "Familie? - Ich weiß es nicht genau. Unsere Eltern und Großeltern leben noch und wir haben elf Geschwister und 27 Tanten und Onkel! Unsere Familie ist sehr groß!",
-            "answer": "ure"
+            "text1": "Du wolltest doch fotografieren. Wo ist ",
+            "text2": "Kamera?",
+            "answer": "deine"
           },
           {
             "number": 3,
-            "text1": "Sind das deine Geschwister? - Nein, das ist meine Schwester und ihr Ehemann. Hier sind meine Brüder. Peter ist nicht verheiratet. Das ist seine Freundin Helena. Und das ist Jan und s...",
-            "text2": "Sohn Oliver.",
-            "answer": "ein"
+            "text1": "Ihr habt eine Waschmaschine gekauft? Wo steht ",
+            "text2": "Waschmaschine?",
+            "answer": "eure"
+          },
+          {
+            "number": 4,
+            "text1": "Das Kind spielt in der Sandkiste. ",
+            "text2": "Jacke ist schmutzig.",
+            "answer": "Seine"
+          },
+          {
+            "number": 5,
+            "text1": "Frau Lenz, Sie haben doch ein Fahrrad. Wo ist denn",
+            "text2": "Fahrrad?",
+            "answer": "Ihr"
+          },
+          {
+            "number": 6,
+            "text1": "Ich bin Arzt. ",
+            "text2": "Bruder ist auch Arzt.",
+            "answer": "Mein"
+          },
+          {
+            "number": 7,
+            "text1": "Wir sind im Urlaub.",
+            "text2": "Kollegen sind auch im Urlaub.",
+            "answer": "Unsere"
           }
         ]
       }
@@ -767,6 +791,463 @@
             "text1": "Dann ",
             "text2": "er seine Meisterprüfung machen.",
             "answer": "kann"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Gender",
+    "exercises" : 
+    [
+      {
+        "descriptionFirstExercise": "Judging by the endings of the words below decide if the nouns are feminine, masculine or neuter. Write your answers (F for feminine, M for masculine and N for neuter)  in the blank space provided under the nouns:",
+        "exerсiseFirstType": 
+        [
+          {
+            "number": 1,
+            "text": "Praktikant",
+            "answer": "M"
+          },
+          {
+            "number": 2,
+            "text": "Sauberkeit",
+            "answer": "F"
+          },
+          {
+            "number": 3,
+            "text": "Student",
+            "answer": "M"
+          },
+          {
+            "number": 4,
+            "text": "Natur",
+            "answer": "F"
+          },
+          {
+            "number": 5,
+            "text": "Mädchen",
+            "answer": "N"
+          },
+          {
+            "number": 6,
+            "text": "Realität",
+            "answer": "F"
+          },
+          {
+            "number": 7,
+            "text": "Ingenieur",
+            "answer": "M"
+          },
+          {
+            "number": 8,
+            "text": "Sicherheit",
+            "answer": "F"
+          },
+          {
+            "number": 9,
+            "text": "Kapitalismus",
+            "answer": "M"
+          },
+          {
+            "number": 10,
+            "text": "Pianist",
+            "answer": "M"
+          },
+          {
+            "number": 11,
+            "text": "Chefin",
+            "answer": "F"
+          },
+          {
+            "number": 12,
+            "text": "Motor",
+            "answer": "M"
+          },
+          {
+            "number": 13,
+            "text": "Liebling",
+            "answer": "M"
+          },
+          {
+            "number": 14,
+            "text": "Zauberei",
+            "answer": "F"
+          },
+          {
+            "number": 15,
+            "text": "Männlein",
+            "answer": "N"
+          },
+          {
+            "number": 16,
+            "text": "Freundschaft",
+            "answer": "F"
+          },
+          {
+            "number": 15,
+            "text": "Rechnung",
+            "answer": "F"
+          },
+          {
+            "number": 16,
+            "text": "Museum",
+            "answer": "N"
+          }
+        ]
+      },
+      {
+        "descriptionSecondExercise": "Identify the gender of the following nouns by supplying the missing definite article (der, die, or das). Pay attention to the words’ endings - they may help you choose the right article.",
+        "exerciseSecondType": 
+        [
+          {
+            "number": 1,
+            "text1": "",
+            "text2": "Entscheidung",
+            "answer": "die"
+          },
+          {
+            "number": 2,
+            "text1": "",
+            "text2": "Kanadierin",
+            "answer": "die"
+          },
+          {
+            "number": 3,
+            "text1": "",
+            "text2": "Revolution",
+            "answer": "die"
+          },
+          {
+            "number": 4,
+            "text1": "",
+            "text2": "Direktor",
+            "answer": "der"
+          },
+          {
+            "number": 5,
+            "text1": "",
+            "text2": "Publikum",
+            "answer": "das"
+          },
+          {
+            "number": 6,
+            "text1": "",
+            "text2": "Gesellschaft",
+            "answer": "die"
+          },
+          {
+            "number": 7,
+            "text1": "",
+            "text2": "Tageszeitung",
+            "answer": "die"
+          },
+          {
+            "number": 8,
+            "text1": "",
+            "text2": "Märchen",
+            "answer": "das"
+          },
+          {
+            "number": 9,
+            "text1": "",
+            "text2": "Konditorei",
+            "answer": "die"
+          },
+          {
+            "number": 10,
+            "text1": "",
+            "text2": "Zufriedenheit",
+            "answer": "die"
+          },
+          {
+            "number": 11,
+            "text1": "",
+            "text2": "Nationalität",
+            "answer": "die"
+          },
+          {
+            "number": 12,
+            "text1": "",
+            "text2": "Kaninchen",
+            "answer": "das"
+          },
+          {
+            "number": 13,
+            "text1": "",
+            "text2": "Lehrling",
+            "answer": "der"
+          },
+          {
+            "number": 14,
+            "text1": "",
+            "text2": "Fräulein",
+            "answer": "das"
+          },
+          {
+            "number": 15,
+            "text1": "",
+            "text2": "Terrorismus",
+            "answer": "der"
+          },
+          {
+            "number": 16,
+            "text1": "",
+            "text2": "Demonstrant",
+            "answer": "der"
+          },
+          {
+            "number": 17,
+            "text1": "",
+            "text2": "Regisseur",
+            "answer": "der"
+          }
+        ]
+      },
+      {
+        "descriptionThirdExercise": "Identify the gender of the following nouns by supplying the missing definite article (der, die, or das).",
+        "exerciseThirdType": 
+        [
+          {
+            "number": 1,
+            "text1": "",
+            "text2": "Regen",
+            "answer": "der"
+          },
+          {
+            "number": 2,
+            "text1": "",
+            "text2": "Honig",
+            "answer": "der"
+          },
+          {
+            "number": 3,
+            "text1": "",
+            "text2": "Museum",
+            "answer": "das"
+          },
+          {
+            "number": 4,
+            "text1": "",
+            "text2": "Schwimmen",
+            "answer": "das"
+          },
+          {
+            "number": 5,
+            "text1": "",
+            "text2": "Onkel",
+            "answer": "der"
+          },
+          {
+            "number": 6,
+            "text1": "",
+            "text2": "Eleganz",
+            "answer": "die"
+          },
+          {
+            "number": 7,
+            "text1": "",
+            "text2": "Qualität",
+            "answer": "die"
+          },
+          {
+            "number": 8,
+            "text1": "",
+            "text2": "Schwester",
+            "answer": "die"
+          },
+          {
+            "number": 9,
+            "text1": "",
+            "text2": "Krankheit",
+            "answer": "die"
+          },
+          {
+            "number": 10,
+            "text1": "",
+            "text2": "Museum",
+            "answer": "das"
+          },
+          {
+            "number": 11,
+            "text1": "",
+            "text2": "Album",
+            "answer": "das"
+          },
+          {
+            "number": 12,
+            "text1": "",
+            "text2": "Reise",
+            "answer": "die"
+          },
+          {
+            "number": 13,
+            "text1": "",
+            "text2": "Gesetz",
+            "answer": "das"
+          },
+          {
+            "number": 14,
+            "text1": "",
+            "text2": "Bruder",
+            "answer": "der"
+          },
+          {
+            "number": 15,
+            "text1": "",
+            "text2": "Apfel",
+            "answer": "der"
+          },
+          {
+            "number": 16,
+            "text1": "",
+            "text2": "Stuhl",
+            "answer": "der"
+          },
+          {
+            "number": 17,
+            "text1": "",
+            "text2": "Bleistift",
+            "answer": "der"
+          },
+          {
+            "number": 18,
+            "text1": "",
+            "text2": "Buch",
+            "answer": "das"
+          },
+          {
+            "number": 19,
+            "text1": "",
+            "text2": "Schere",
+            "answer": "die"
+          },
+          {
+            "number": 20,
+            "text1": "",
+            "text2": "Bügeleisen",
+            "answer": "das"
+          },
+          {
+            "number": 21,
+            "text1": "",
+            "text2": "Fernseher",
+            "answer": "der"
+          },
+          {
+            "number": 22,
+            "text1": "",
+            "text2": "Waschmaschine",
+            "answer": "die"
+          },
+          {
+            "number": 23,
+            "text1": "",
+            "text2": "Handy",
+            "answer": "das"
+          },
+          {
+            "number": 24,
+            "text1": "",
+            "text2": "Kuli",
+            "answer": "der"
+          },
+          {
+            "number": 25,
+            "text1": "",
+            "text2": "Computer",
+            "answer": "der"
+          },
+          {
+            "number": 26,
+            "text1": "",
+            "text2": "Lampe",
+            "answer": "die"
+          },
+          {
+            "number": 27,
+            "text1": "",
+            "text2": "Wasserkocher",
+            "answer": "die"
+          },
+          {
+            "number": 28,
+            "text1": "",
+            "text2": "Helf",
+            "answer": "das"
+          },
+          {
+            "number": 29,
+            "text1": "",
+            "text2": "Uhr",
+            "answer": "die"
+          },
+          {
+            "number": 30,
+            "text1": "",
+            "text2": "Teller",
+            "answer": "der"
+          },
+          {
+            "number": 31,
+            "text1": "",
+            "text2": "Tasse",
+            "answer": "die"
+          },
+          {
+            "number": 32,
+            "text1": "",
+            "text2": "Glas",
+            "answer": "das"
+          },
+          {
+            "number": 33,
+            "text1": "",
+            "text2": "Messer",
+            "answer": "das"
+          },
+          {
+            "number": 34,
+            "text1": "",
+            "text2": "Gabel",
+            "answer": "die"
+          },
+          {
+            "number": 35,
+            "text1": "",
+            "text2": "Löffel",
+            "answer": "der"
+          },
+          {
+            "number": 36,
+            "text1": "",
+            "text2": "Brille",
+            "answer": "die"
+          },
+          {
+            "number": 37,
+            "text1": "",
+            "text2": "Hose",
+            "answer": "die"
+          },
+          {
+            "number": 38,
+            "text1": "",
+            "text2": "Motorrad",
+            "answer": "das"
+          },
+          {
+            "number": 39,
+            "text1": "",
+            "text2": "Garage",
+            "answer": "die"
+          },
+          {
+            "number": 40,
+            "text1": "",
+            "text2": "Taxi",
+            "answer": "das"
           }
         ]
       }

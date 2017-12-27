@@ -55,7 +55,7 @@
     font-weight: 100;
   }
   .question input {
-    width: 70px;
+    width: 90px;
     padding: 5px;
     color: #979797;
     text-align: left;
@@ -71,13 +71,13 @@
     background-image: url('../../assets/check-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position: 60px;
+    background-position: 80px;
   }
   .question input.incorrect {
     color: #f2341c !important;
     background-image: url('../../assets/x-circle.png');
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position: 60px;
+    background-position: 80px;
   }
 </style>
